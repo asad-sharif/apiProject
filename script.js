@@ -5,7 +5,6 @@ const adviceContainer = document.querySelector('#advice');
 btn.addEventListener('click', async () => {
     const response = await fetch('https://api.adviceslip.com/advice');
     const data = await response.json();
-    console.log(data.slip.advice);
     
     let advice = document.createElement('p');
     advice.innerText = data.slip.advice;
